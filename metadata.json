@@ -1,0 +1,5 @@
+{
+  "name": "Stock Analyzer V2",
+  "description": "Logiciel d'analyse boursière multi-actifs avec moteur d'analyse IA (Gemini), scores de santé de portefeuille et scénarios prédictifs.",
+  "requestFramePermissions": []
+}
