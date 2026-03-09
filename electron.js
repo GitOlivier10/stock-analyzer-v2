@@ -1,7 +1,11 @@
-const { app, BrowserWindow, Menu, ipcMain, dialog } = require('electron');
-const path = require('path');
-const { spawn } = require('child_process');
-const fs = require('fs');
+import { app, BrowserWindow, Menu, ipcMain, dialog } from 'electron';
+import path from 'path';
+import { spawn } from 'child_process';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let mainWindow;
 let serverProcess;
@@ -17,7 +21,7 @@ function createWindow() {
       nodeIntegration: false,
       contextIsolation: true,
       enableRemoteModule: false,
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.cjs')
     },
     icon: path.join(__dirname, 'assets', 'icon.png'), // We'll create this
     titleBarStyle: 'default',

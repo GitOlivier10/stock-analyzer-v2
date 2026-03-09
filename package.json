@@ -63,7 +63,7 @@
     "files": [
       "dist/**/*",
       "electron.js",
-      "preload.js",
+      "preload.cjs",
       "server.js",
       "data/**/*",
       "node_modules/**/*",
